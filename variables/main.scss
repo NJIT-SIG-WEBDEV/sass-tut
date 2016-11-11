@@ -1,0 +1,12 @@
+
+//We declare a variable named text-color and assign the color red to it.
+$text-color: red;
+
+
+//Now each of our elements can use that color. When you change the variable, everything gets updated.
+p{
+  color: $text-color;
+}
+h1{
+  color: $text-color;
+}

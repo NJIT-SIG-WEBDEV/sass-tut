@@ -1,0 +1,29 @@
+//We specify some specific colors.
+$bg-color: #2c3e50;
+$hover-color: #16a085;
+$text-color: #ffffff;
+
+
+//Instead of writing each element on top of each other, we nest one element inside other.
+nav{
+  ul{  //this ul style is only valid for uls inside of nav elements.
+    background: $bg-color;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+  li{ //We could put this into the ul tag, whichever way is fine.
+    display: inline-block;
+  }
+
+  a{
+    color: $text-color;
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none;
+
+    &:hover{ // the & sign acts as the Parent Selector. So this is the same as writing a:hover.
+      background: $hover-color;
+    }
+  }
+}
