@@ -1,0 +1,25 @@
+//importing the panel color from colors.scss
+//Its good practice to always store any colors you have in one colors.scss file
+@import "colors";
+
+
+//base panel properties
+.panel{
+  border: 3px solid dodgerblue;
+  background: $panel-color;
+  margin: 10px;
+  width: 20%;
+}
+
+
+.little-panel{
+  @extend .panel; //Inherits all the properties of .panel above
+  padding: 10px;
+  font-size: 15px;
+}
+
+.big-panel{
+  @extend .panel; //Inherits all the properties of .panel above
+  padding: 15px;
+  font-size: 24px;
+}
