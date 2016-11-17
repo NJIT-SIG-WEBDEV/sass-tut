@@ -1,0 +1,35 @@
+//importing the panel color from colors.scss
+//Its good practice to always store any colors you have in one colors.scss file
+@import "colors";
+
+
+//base panel properties
+.panel{
+  border: 3px solid dodgerblue;
+  background: $panel-color;
+  margin: 10px;
+  width: 20%;
+}
+
+//Mixin acts like a method; You name the method and pass arguments to it
+//its like function foo(arg) where function = @mixin, foo = border-radius and arg=$radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.little-panel{
+  @extend .panel; //Inherits all the properties of .panel above
+  @include border-radius(15px); //we call the function or mixin here passing a px value as an argument
+  padding: 10px;
+  font-size: 15px;
+}
+
+.big-panel{
+  @extend .panel; //Inherits all the properties of .panel above
+  @include border-radius(25px); //we call the function or mixin here passing a px value as an argument
+  padding: 15px;
+  font-size: 24px;
+}
